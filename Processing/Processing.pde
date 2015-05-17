@@ -8,7 +8,7 @@
  * Auteur : Felix SEMPE-BOURDON
  *
  * Date de création : 2015-02-14
- * Date de modification : 2015-05-03
+ * Date de modification : 2015-05-17
  * 
  * Licence CC-BY-NC-SA
  */
@@ -120,11 +120,11 @@ void draw() {
       if (millis() - timerGif >= 60*60*1000)
       { 
         gif.finish();
+        gif = new GifMaker(this, "/archives/" + SDFJour.format(formatDate) + "/" + hour + ".gif");
         gif.setRepeat(0);
         timerGif = millis();
       }
     }
   }
 }
-
 
